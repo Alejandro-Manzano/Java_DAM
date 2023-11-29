@@ -1,0 +1,90 @@
+package Simples;
+
+import java.util.Scanner;
+
+public class Ejercicios_1 {
+
+	public static void main(String[] args) {
+		
+		//1-
+		sayHelloWorld();
+		
+		//2-
+		String helloString = "Hello World!";
+		sayHelloWorldTwo(helloString);
+		
+		//3-
+		helloName();
+		
+		//4- 
+		operacion();
+
+	}
+	
+	//1- Escribir un método que muestre por pantalla la cadena ¡Hola Mundo!
+	
+	public static void sayHelloWorld() {
+		System.out.println("Hello World!");
+	}
+	
+	//2- Escribir un método al que se le pase una cadena ¡Hola Mundo! En una
+	//variable y luego la muestre por consola.
+	
+	public static void sayHelloWorldTwo(String x) {
+		System.out.println(x);
+	}
+	
+	//3- Escribir un programa que pregunte el nombre del usuario en la consola y
+	//después la muestre por pantalla la cadena “Hola &lt;nombre&gt;” donde
+	//&lt;nombre&gt; es el nombre introducido por le usuario.
+	
+	public static void helloName() {
+		Scanner nameScanner = new Scanner(System.in);
+		System.out.println("Cual es tu nombre");
+		String name = nameScanner.next();
+		System.out.println("Hola " + name);
+	}
+	
+	//4- Escribir un programa que muestre por pantalla el resultado de la siguiente
+	//operación aritmética
+	
+	private static void operacion() {
+		double resultado = Math.pow((3.0+2.0)/(2.0*5.0), 2.0);
+		System.out.println(resultado);
+	}
+	
+	//5- Escribir un programa que pregunte al usuario por el número de horas
+	//trabajadas y el coste por hora. Después debe mostrar por pantalla los
+	//dineros que se le deben.
+	
+	public static void horas() {
+		Scanner horasYDineroScanner = new Scanner(System.in);
+		System.out.println("Cuanats horas trabajaste");
+		double horas = horasYDineroScanner.nextDouble();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
