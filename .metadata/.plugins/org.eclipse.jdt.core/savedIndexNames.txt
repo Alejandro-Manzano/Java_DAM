@@ -1,4 +1,2 @@
 INDEX VERSION 1.134+/Users/alexxml_/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
-697386761.index
-1937765786.index
 1865797976.index
