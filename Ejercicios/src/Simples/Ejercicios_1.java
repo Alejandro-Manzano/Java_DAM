@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
+import javax.net.ssl.SSLContext;
+
 public class Ejercicios_1 {
 
 public static void main(String[] args) {
@@ -32,7 +34,13 @@ seeHolaMundo(holaMundoString);
 //calcularIMC();
 
 //8-
-division();
+//division();
+
+//9-
+//juguetería();
+
+//10-
+panadería();
 
 }
 
@@ -148,5 +156,44 @@ System.out.println("Escribe un númrto entero");
 	//g y cada muñeca 75 g. Escribir un programa que lea el número de payasos
 	//y muñecas vendidos en el último pedido y calcule el peso total del
 	//paquete que será enviado.
+	
+	public static void juguetería() {
+		Scanner jugueterScanner = new Scanner(System.in);
+		
+		System.out.println("Cuantos payasos vendiste en el último envío");
+		int payasos = jugueterScanner.nextInt();
+		System.out.println("Cuantos pmuñecas vendiste en el último envío");
+		int muñecaString = jugueterScanner.nextInt();
+		
+		int pesoTotal = (payasos*112)+(muñecaString*75);
+		System.out.println("El peso total fueron " +pesoTotal+ " g");
+		jugueterScanner.close();
+	}
+	
+	//10- Una panadería vende barras de pan a 3.49€ cada una. El pan que no es el
+	//día tiene un descuento del 60%. Escribir un programa que comience
+	//leyendo el número de barras vendidas que no son del día. Después el
+	//programa debe mostrar el precio habitual de una barra de pan, el
+	//descuento que se le hace por no ser fresca y el coste final total. Tal que
+	//así:
+	//“Precio original: 3.49€”
+	//“Descuento del 60%: X.XX€”
+	//“TOTAL: XX.XX€
+	
+	public static void panadería() {
+		
+		System.out.println("Precio original: 3,49€");
+		double descuento = (3.49*60) / 100;
+		double descuento2 = Math.round(descuento *100.0) / 100.0;
+		
+		System.out.println("Descuento del 60%: " +descuento2);
+		double precioTotal = 3.49 - descuento2;
+		
+		BigDecimal decimal = new BigDecimal(precioTotal).setScale(2, RoundingMode.FLOOR);
+		
+		System.out.println("TOTAL: " +decimal);
+		
+		
+	}
 
 }
