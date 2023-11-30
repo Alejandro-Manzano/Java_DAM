@@ -1,5 +1,7 @@
 package Simples;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class Ejercicios_1 {
@@ -15,16 +17,19 @@ String holaMundoString = "¡Hola Mundo!";
 seeHolaMundo(holaMundoString);
 
 //3-
-saludarNombre();
+//saludarNombre();
 
 //4-
-operacion();
+//operacion();
 
 //5-
-horas();
+//horas();
 
 //6-
-enteros();
+//enteros();
+
+//7-
+calcularIMC();
 
 }
 
@@ -89,5 +94,25 @@ System.out.println(suma);
 System.out.println("Escribe un númrto entero");
 }
 }
+
+	//7- Escribir un programa que pida al usuario su peso (en kg) y estatura (en
+	//metros), calcule el índice de masa corporal y lo almacene en una variable,
+	//y muestre por pantalla la frase “Tu índice de masa corporal es &lt;imc&gt;”
+	//donde &lt;imc&gt; es el índice de masa corporal calculado redondeado con dos
+	//decimales.
+
+	public static void calcularIMC() {
+		Scanner pesoYAlturaScanneerScanner = new Scanner(System.in);
+		System.out.println("Dime tu peso en kg");
+		double kg = pesoYAlturaScanneerScanner.nextDouble();
+		
+		System.out.println("Dime tu estatura en metros, ej:1,77m");
+		double altura = pesoYAlturaScanneerScanner.nextDouble();
+		
+		double IMC = kg/altura;
+		//método para dejar el double solo con 2 decimales
+		BigDecimal numDecimal = new BigDecimal(IMC).setScale(2,RoundingMode.HALF_UP);
+		System.out.println(numDecimal);
+	}
 
 }
