@@ -29,7 +29,10 @@ seeHolaMundo(holaMundoString);
 //enteros();
 
 //7-
-calcularIMC();
+//calcularIMC();
+
+//8-
+division();
 
 }
 
@@ -112,7 +115,38 @@ System.out.println("Escribe un númrto entero");
 		double IMC = kg/altura;
 		//método para dejar el double solo con 2 decimales
 		BigDecimal numDecimal = new BigDecimal(IMC).setScale(2,RoundingMode.HALF_UP);
-		System.out.println(numDecimal);
+		System.out.println("Tu IMC es " +numDecimal);
+		
+		pesoYAlturaScanneerScanner.close();
 	}
+	
+	//8- Escribir un programa que pida al usuario dos números enteros y muestre
+	//por pantalla dividendo entre divisor da un cociente "c" y un resto
+	//"r" “ donde &lt;dividendo&gt; y &lt;divisor&gt; son los números introducidos por el
+	//usuario, y &lt;c&gt; y &lt;r&gt; son el cociente y el resto de la división entera
+	//respectivamente.
+	
+	public static void division() {
+		Scanner divisionScanner = new Scanner(System.in);
+		System.out.println("Dime un dividendo");
+		double dividendo = divisionScanner.nextDouble();
+		System.out.println("Dime un divisor");
+		double divisor = divisionScanner.nextDouble();
+		
+		double cociente = dividendo/divisor;
+		double resto = dividendo%divisor;
+		
+		System.out.println("Has dividido " +dividendo+ " / " +divisor+ " y el resto es " +resto+ " y cociente " +cociente);
+		
+		divisionScanner.close();
+	}
+	
+	//9- Una juguetería tiene mucho éxito en dos de sus productos: payasos y
+	//muñecas. Suele hacer venta por correo y la empresa de logística les cobra
+	//por peso de cada paquete así que deben calcular el peso de los payasos y
+	//muñecas que saldrán en cada paquete a demanda. Cada payaso pesa 112
+	//g y cada muñeca 75 g. Escribir un programa que lea el número de payasos
+	//y muñecas vendidos en el último pedido y calcule el peso total del
+	//paquete que será enviado.
 
 }
