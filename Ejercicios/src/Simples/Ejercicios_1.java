@@ -4,8 +4,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
-import javax.net.ssl.SSLContext;
-
 public class Ejercicios_1 {
 
 public static void main(String[] args) {
@@ -63,6 +61,7 @@ Scanner saludarPersonaScanner = new Scanner(System.in);
 System.out.println("Como te llamas?");
 String nameString = saludarPersonaScanner.next();
 System.out.println("Hola " + nameString);
+saludarPersonaScanner.close();
 }
 
 //4- Escribir un programa que muestre por pantalla el resultado de la siguiente
@@ -84,6 +83,7 @@ double horas = horasYDineroScanner.nextInt();
 System.out.println("Cuanto dinero cobras por hora?");
 double dinero = horasYDineroScanner.nextInt();
 System.out.println("te deben " +horas*dinero+ " $");
+horasYDineroScanner.close();
 
 }
 
@@ -99,6 +99,7 @@ int suma = 0;
 if (entero>=0) {
 for (int i = 1; i<=entero; i++) {
 suma += i;
+nEnteroScanner.close();
 }
 System.out.println(suma);
 } else {
