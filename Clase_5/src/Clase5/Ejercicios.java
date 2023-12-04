@@ -17,7 +17,7 @@ public class Ejercicios {
 		//name2();
 
 		//4-
-		telefono();
+		//telefono();
 
 		//5-
 		//fraseInvertida();
@@ -27,6 +27,9 @@ public class Ejercicios {
 
 		//7-
 		//precio();
+		
+		//8-
+		//date();
 
 	}
 
@@ -173,5 +176,34 @@ public class Ejercicios {
 		
 		dineroScanner.close();
 
+	}
+	
+	//8- Escribir un programa que pregunte al usuario la fecha de su nacimiento en
+	//formato dd/mm/aaaa y muestra por pantalla, el día, el mes y el año.
+	//Día:
+	//Mes:
+	//Año:
+	//Adaptar el programa anterior para que también funcione cuando el día o
+	//el mes se introduzcan con un solo carácter.
+	
+	public static void date() {
+		Scanner dateScanner = new Scanner(System.in);
+		
+		System.out.println("Dime tu fecha de nacimiento: dd/mm/aaaa");
+		
+		String dateString = dateScanner.next();
+		
+		String[]dateArrayStrings = dateString.split("/");
+		
+		String day = dateArrayStrings[0];
+		String month = dateArrayStrings[1];
+		String year = dateArrayStrings[2];
+		
+		System.out.println("Día: " +day);
+		System.out.println("Mes: " +month);
+		System.out.println("Año: " +year);
+		
+		dateScanner.close();
+		
 	}
 	}
