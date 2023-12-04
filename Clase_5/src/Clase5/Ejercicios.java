@@ -30,6 +30,9 @@ public class Ejercicios {
 		
 		//8-
 		//date();
+		
+		//9-
+		cesta();
 
 	}
 
@@ -206,4 +209,26 @@ public class Ejercicios {
 		dateScanner.close();
 		
 	}
+	
+	//9- Escribir un programa que pregunte por consola por los productos de una
+	//cesta de la compra, separados por comas, y muestre por pantalla cada uno
+	//de los productos en una línea distinta.
+	
+	public static void cesta() {
+		Scanner cestaScanner = new Scanner(System.in);
+		
+		System.out.println("Dime los productos de tu cesta separadaos por comas: ");
+		String cestaCompraString = cestaScanner.nextLine();
+		
+		String [] cestaArrayStrings = cestaCompraString.split(",");
+		
+		
+		for (int j = 0; j<cestaArrayStrings.length; j++) {
+			System.out.println(cestaArrayStrings[j]);
+			
+		}
+		cestaScanner.close();
+		
+	}
+	
 	}
