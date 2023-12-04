@@ -17,17 +17,16 @@ public class Ejercicios {
 		//name2();
 
 		//4-
-		//telefono();
+		telefono();
 
 		//5-
-		fraseInvertida();
+		//fraseInvertida();
 
 		//6-
 		//correo();
 
 		//7-
-
-
+		//precio();
 
 	}
 
@@ -162,6 +161,17 @@ public class Ejercicios {
 		Scanner dineroScanner = new Scanner(System.in);
 
 		System.out.println("Dime un precio con dos decimales, ej: 2,35$");
+		String precio = dineroScanner.next();
+		
+		String[] parts = precio.split(",");
+		
+		String precio_1 = parts[0];
+		String precio_2 = parts[1];
+		
+		System.out.println("Euros: " +precio_1+ "$");
+		System.out.println("Céntimos de Euro: " +precio_2+ " cts");
+		
+		dineroScanner.close();
 
 	}
 	}
