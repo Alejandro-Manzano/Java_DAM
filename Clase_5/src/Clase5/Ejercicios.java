@@ -1,6 +1,6 @@
 package Clase5;
 
-import java.util.Iterator;
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Ejercicios {
@@ -32,7 +32,10 @@ public class Ejercicios {
 		//date();
 		
 		//9-
-		cesta();
+		//cesta();
+		
+		//10-
+		juguetes();
 
 	}
 
@@ -229,6 +232,44 @@ public class Ejercicios {
 		}
 		cestaScanner.close();
 		
+	}
+	
+	//10- Escribir un programa que pregunte el nombre de un producto, su precio y
+	//un número de unidades y muestre por pantalla una cadena con el nombre
+	//del producto seguido de su precio unitario con 6 dígitos enteros y 2
+	//decimales, el número de unidades con tres dígitos y el coste total con 8
+	//dígitos enteros y 2 decimales, todos estos datos separados por espacios
+	//tal que así:
+	//Juguete 000008,99 027 00000242,73
+	
+	public static void juguetes() {
+		
+		Scanner jugueteScanner = new Scanner(System.in);
+		
+		System.out.println("Dime el nombre del producto");
+		String productoString = jugueteScanner.next();
+		
+		System.out.println("Dime el precio del producto (8.89$)");
+		double precioJuguete = jugueteScanner.nextDouble();
+		
+		System.out.println("Cuantas unidades has cogido");
+		int unidadesJuguete = jugueteScanner.nextInt();
+		
+		jugueteScanner.close();
+		
+		//formateo el precio para que tenga el formato 000000.00
+		DecimalFormat formatPrecio = new DecimalFormat("000000.00");
+		String numeroFormateado = formatPrecio.format(precioJuguete);
+		
+		//formatear unidaes con estructura 000
+		String formatUnidaes = String.format("%03d", unidadesJuguete);
+		
+		//formateo precio total
+		double costeTotal = precioJuguete*unidadesJuguete;
+		DecimalFormat formatCoste = new DecimalFormat("00000000.00");
+		String numFormteadoUnidades = formatCoste.format(costeTotal);
+		
+		System.out.println(productoString+ " " +numeroFormateado+ " " +formatUnidaes+ " " +numFormteadoUnidades);
 	}
 	
 	}
