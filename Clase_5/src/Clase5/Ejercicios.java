@@ -252,7 +252,7 @@ public class Ejercicios {
 		System.out.println("Dime el precio del producto (8.89$)");
 		double precioJuguete = jugueteScanner.nextDouble();
 		
-		System.out.println("Cuantas unidades has cogido");
+		System.out.println("Cuantas unidades has cogido (sin decimal)");
 		int unidadesJuguete = jugueteScanner.nextInt();
 		
 		jugueteScanner.close();
@@ -270,6 +270,8 @@ public class Ejercicios {
 		String numFormteadoUnidades = formatCoste.format(costeTotal);
 		
 		System.out.println(productoString+ " " +numeroFormateado+ " " +formatUnidaes+ " " +numFormteadoUnidades);
+		
+		
 	}
 	
 	}
