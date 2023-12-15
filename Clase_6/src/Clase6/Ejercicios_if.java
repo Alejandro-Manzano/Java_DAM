@@ -25,9 +25,13 @@ public class Ejercicios_if {
 		//clases();
 		
 		//7-
+		puntuacion();
 		
 		//8-
-		name();
+		//name();
+		
+		//9-
+		
 		
 		
 
@@ -189,6 +193,21 @@ public class Ejercicios_if {
 		System.out.println("Dime tu puntuación");
 		double score = scanner.nextDouble();
 		
+		int dinero = 2400;
+		
+		if (score == 0.0) {
+			System.out.println("El nivel es inaceptable");
+			System.out.println("Tu bono es: " +dinero);
+		} if (score == 0.4) {
+			System.out.println("El nivel es aceptable");
+			System.out.println("Tu bono es: " +dinero * 1.05);
+		} if (score == 0.6) {
+			System.out.println("El nivel es meritorio");
+			System.out.println("Tu bono es: " +dinero * 1.10);
+		} 
+		
+		scanner.close();
+		
 		
 	}
 	
@@ -215,5 +234,17 @@ public class Ejercicios_if {
 		
 		scanner.close();
 	}
+	
+	//9- La pizzería Bella Pedara ofrece pizzas vegetarianas y no vegetarianas a sus
+	//clientes. Los ingredientes para cada tipo de pizza aparecen a continuación.
+
+	//Ingredientes vegetarianos: Pimiento y tofu.
+	//Ingredientes no vegetarianos: Salami, Jamón y Salmón.
+	//Escribir un programa que pregunte al usuario si quiere una pizza
+	//vegetariana o no, y en función de su respuesta le muestre un menú con
+	//los ingredientes disponibles para que elija. Solo se puede elegir un
+	//ingrediente además de la mozzarella y el tomate que están en todas la
+	//pizzas. Al final se debe mostrar por pantalla si la pizza elegida es
+	//vegetariana o no y todos los ingredientes que lleva.
 	
 }
