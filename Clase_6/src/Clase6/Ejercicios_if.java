@@ -10,7 +10,10 @@ public class Ejercicios_if {
 		//edad();
 		
 		//2-
-		password();
+		//password();
+		
+		//3-
+		resto();
 
 	}
 	
@@ -55,4 +58,29 @@ public class Ejercicios_if {
 		
 		passwordScanner.close();
 	}
+	
+	//3- Escribir un programa que pida al usuario dos números y muestre por
+	//pantalla su división. Si el divisor es cero el programa debe mostrar un
+	//error. (Usa System.err en vez de System.out)
+	
+	public static void resto() {
+		Scanner restoScanner = new Scanner(System.in);
+		
+		System.out.println("Dime el dividendo");
+		int dividendo = restoScanner.nextInt();
+		
+		System.out.println("Dime el divisor");
+		int divisor = restoScanner.nextInt();
+		
+		int resto = dividendo/divisor;
+		
+		if (divisor == 0) {
+			System.err.println("Error divisor 0");
+		} else {
+			System.out.println(dividendo + " / " +divisor+ " = " +resto);
+		}
+		
+		restoScanner.close();
+	}
+	
 }
