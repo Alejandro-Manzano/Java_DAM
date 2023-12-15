@@ -13,7 +13,13 @@ public class Ejercicios_if {
 		//password();
 		
 		//3-
-		resto();
+		//resto();
+		
+		//4-
+		//parImpar();
+		
+		//5-
+		tributar();
 
 	}
 	
@@ -81,6 +87,46 @@ public class Ejercicios_if {
 		}
 		
 		restoScanner.close();
+	}
+	
+	//4- Escribir un programa que pida al usuario un número entero y muestre por
+	//pantalla si es par o impar.
+	
+	public static void parImpar() {
+		Scanner numScanner = new Scanner(System.in);
+		
+		System.out.println("Dame un número entero");
+		int number = numScanner.nextInt();
+		
+		if (number%2 == 0) {
+			System.out.println("Es par");
+		} else {
+			System.out.println("Es impar");
+		}
+		numScanner.close();
+	}
+	
+	//5 - Para tributar un determinado impuesto se debe ser mayor de 16 años y
+	//tener unos ingresos iguales o superiores a 1000 € mensuales. Escribir un
+	//programa que pregunte al usuario su edad y sus ingresos mensuales y
+	//muestre por pantalla si el usuario tiene que tributar o no.
+	
+	public static void tributar() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Edad:");
+		int edad = scanner.nextInt();
+		
+		System.out.println("Ingresos mensuales");
+		int ingresos = scanner.nextInt();
+		
+		if (ingresos >= 1000 && edad > 16) {
+			System.out.println("Puedes tributar");
+		} else {
+			System.out.println("No puedes tributar");
+		}
+		
+		scanner.close();
 	}
 	
 }
