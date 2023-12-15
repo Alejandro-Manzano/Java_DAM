@@ -7,7 +7,10 @@ public class Ejercicios_if {
 	public static void main(String[] args) {
 		
 		//1
-		edad();
+		//edad();
+		
+		//2-
+		password();
 
 	}
 	
@@ -30,5 +33,26 @@ public class Ejercicios_if {
 		}
 		edadScanner.close();
 	}
+	
+	// 2-Escribir un programa que almacene la cadena de caracteres contraseña en
+	//una variable, pregunte al usuario por la contraseña e imprima por pantalla
+	//si la contraseña introducida por el usuario coincide con la guardada en la
+	//variable sin tener en cuenta mayúsculas y minúsculas.
 
+	
+	public static void password() {
+		Scanner passwordScanner = new Scanner(System.in);
+		System.out.println("Dime tu contraseña");
+		
+		String passwordString = passwordScanner.next();
+		String password2 = "fr234";
+		
+		if (password2.equalsIgnoreCase(passwordString)) {
+			System.out.println("Contraseña correcta");
+		} else {
+			System.out.println("Contraseña incorrecta");
+		}
+		
+		passwordScanner.close();
+	}
 }
