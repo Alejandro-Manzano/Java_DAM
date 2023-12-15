@@ -19,7 +19,11 @@ public class Ejercicios_if {
 		//parImpar();
 		
 		//5-
-		tributar();
+		//tributar();
+		
+		//6- 
+		clases();
+		
 
 	}
 	
@@ -129,4 +133,31 @@ public class Ejercicios_if {
 		scanner.close();
 	}
 	
+	//6- Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al
+	//sexo y el nombre. El grupo A esta formado por las mujeres con un nombre
+	//anterior a la M y los hombres con un nombre posterior a la N y el grupo B
+	//por el resto. Escribir un programa que pregunte al usuario su nombre y
+	//sexo, y muestre por pantalla el grupo que le corresponde.
+	
+	public static void clases() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Dime tu nombre");
+		String nombre = scanner.next();
+		System.out.println("Eres hombre o mujer");
+		String sexo = scanner.next();
+		
+		char primeraLetra = Character.toLowerCase(nombre.charAt(0));
+		
+		if ( ((sexo.equals("mujer"))&&(primeraLetra >= 'a' && primeraLetra <= 'm')) || ((sexo.equals("hombre"))&&(primeraLetra >= 'n' && primeraLetra <= 'z'))) {
+			System.out.println("Nombre: " +nombre);
+			System.out.println("Sexo: " +sexo);
+			System.out.println("Perteneces al grupo A");
+		} else {
+			System.out.println("Nombre: " +nombre);
+			System.out.println("Sexo: " +sexo);
+			System.out.println("Perteneces al grupo B");
+		}
+		scanner.close();
+	}
 }
