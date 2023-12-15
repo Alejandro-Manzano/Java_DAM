@@ -22,7 +22,13 @@ public class Ejercicios_if {
 		//tributar();
 		
 		//6- 
-		clases();
+		//clases();
+		
+		//7-
+		
+		//8-
+		name();
+		
 		
 
 	}
@@ -160,4 +166,54 @@ public class Ejercicios_if {
 		}
 		scanner.close();
 	}
+	
+	//7- En una determinada empresa, sus empleados son evaluados al final de
+	//cada año. Los puntos que pueden obtener en la evaluación comienzan en
+	//0.0 y pueden ir aumentando, traduciéndose en mejores beneficios. Los
+	//puntos que pueden conseguir los empleados pueden ser 0.0, 0.4 o 0.6,
+	//pero no valores intermedios entre las cifras mencionadas. A continuación
+	//se muestra una tabla con los niveles correspondientes a cada puntuación.
+	//La cantidad de dinero conseguida en cada nivel es de 2.400€ multiplicada
+	//por la puntuación del nivel.
+
+	//Nivel Puntuación % a multiplicar
+	//Inaceptable 0,0 1,00
+	//Aceptable 0,4 1,05
+	//Meritorio 0,6 1,10
+	//Escribe un programa que lea la puntuación del usuario e indique su nivel
+	//de rendimiento, así como la cantidad de dinero que recibirá el usuario.
+	
+	private static void puntuacion() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Dime tu puntuación");
+		double score = scanner.nextDouble();
+		
+		
+	}
+	
+	//8- Escribir un programa para una empresa que tiene salas de juegos para
+	//todas las edades y quiere calcular de forma automática el precio que debe
+	//cobrar a sus clientes por entrar. El programa debe preguntar al usuario la
+	//edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de
+	//4 años puede entrar gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es
+	//mayor de 18 años, 10€.
+	
+	public static void name() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Dime tu edad");
+		int edad = scanner.nextInt();
+		
+		if (edad < 4) {
+			System.out.println("Puedes entrar gratis");
+		} if (edad >=4 && edad <=18) {
+			System.out.println("Tienes que pagar 5$");
+		} else {
+			System.out.println("Tienes que pagar 10$");
+		} 
+		
+		scanner.close();
+	}
+	
 }
