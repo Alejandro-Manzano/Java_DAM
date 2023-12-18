@@ -25,12 +25,13 @@ public class Ejercicios_if {
 		//clases();
 		
 		//7-
-		puntuacion();
+		//puntuacion();
 		
 		//8-
 		//name();
 		
 		//9-
+		pizzeria();
 		
 		
 		
@@ -187,7 +188,7 @@ public class Ejercicios_if {
 	//Escribe un programa que lea la puntuación del usuario e indique su nivel
 	//de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 	
-	private static void puntuacion() {
+	public static void puntuacion() {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Dime tu puntuación");
@@ -246,5 +247,37 @@ public class Ejercicios_if {
 	//ingrediente además de la mozzarella y el tomate que están en todas la
 	//pizzas. Al final se debe mostrar por pantalla si la pizza elegida es
 	//vegetariana o no y todos los ingredientes que lleva.
+	
+	public static void pizzeria() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Quieres pizza vegetariana, marca 1 si quieres y 2 si no");
+		
+		int respuesta = scanner.nextInt();
+		
+		if (respuesta == 1) {
+			System.out.println("Marca 1 si quieres Pimiento y 2 si quieres tofu");
+			int respuestaVeg = scanner.nextInt();
+			
+			if (respuestaVeg == 1) {
+				System.out.println("Pizza vegetariana con tomate, mozarella y pimientos");
+			} else if (respuestaVeg == 2) {
+				System.out.println("Pizza vegetariana con tomate, mozarella y tofu");
+			}
+		} else if (respuesta == 2) {
+			System.out.println("Pizza con carne, marca 1 si quieres Salami, 2 Jamón y 3 Salmón");
+			int respuestaCarne = scanner.nextInt();
+			
+			if (respuestaCarne == 1) {
+				System.out.println("Pizza de carne con tomate, mozarrella y salami");
+			} else if (respuestaCarne == 2 ) {
+				System.out.println("Pizza de carne con tomate, mozarrella y jamón");
+			} else if (respuestaCarne == 3) {
+				System.out.println("Pizza de carne con tomate, mozarrella y salmón");
+			}
+		}
+		
+		scanner.close();
+	}
 	
 }
