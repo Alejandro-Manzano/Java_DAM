@@ -11,6 +11,9 @@ public class For {
 		
 		//2-
 		//edad();
+		
+		//3-
+		//enterosImpares();
 
 	}
 	
@@ -44,6 +47,30 @@ public class For {
 			System.out.print(i + " años" + " ");
 		}
 		scanner.close();
+	}
+	
+	//3- Escribir un programa que pida al usuario un número entero positivo y
+	//muestre por pantalla todos los números impares desde 1 hasta ese
+	//número separados por comas.
+	
+	public static void enterosImpares() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Dime un número entero");
+		int number = scanner.nextInt();
+		
+		if (number%1 == 0 && number > 0) {
+			
+		for (int i = 1; i <=number; i+=2) {
+			System.out.print(i + ",");
+		}
+			
+		} else {
+			System.out.println(number + " no es entero o positivo o es 0");
+		}
+		
+		scanner.close();
+		
 	}
 
 }
