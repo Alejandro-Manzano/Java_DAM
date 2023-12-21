@@ -14,6 +14,9 @@ public class For {
 		
 		//3-
 		//enterosImpares();
+		
+		//4-
+		//esEntero();
 
 	}
 	
@@ -71,6 +74,28 @@ public class For {
 		
 		scanner.close();
 		
+	}
+	
+	//4- Escribir un programa que pida al usuario un número entero y muestre por
+	//pantalla si es par o impar.
+	
+	public static void esEntero() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Dime un número entero");
+		int number = scanner.nextInt();
+		
+		if (number%1 == 0) {
+			if (number%2 == 0) {
+				System.out.println(number+ " es par");
+			}else {
+				System.out.println(number + " es impar");
+			}
+		} else {
+			System.out.println("Dame un entero");
+		}
+		
+		scanner.close();
 	}
 
 }
