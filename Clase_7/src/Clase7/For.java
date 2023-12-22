@@ -29,7 +29,7 @@ public class For {
 		//tabla();
 		
 		//8-
-		triangulo();
+		//triangulo();
 		
 
 	}
@@ -218,6 +218,14 @@ public class For {
 			System.out.println("Introduce un número entero y positivo");
 		}
 	
+	}
+	
+	//9- Escribir un programa que almacene la cadena de caracteres contraseña en
+	//una variable, pregunte al usuario por la contraseña hasta que introduzca
+	//la contraseña correcta.
+	
+	public static void password() {
+		
 	}
 
 }
