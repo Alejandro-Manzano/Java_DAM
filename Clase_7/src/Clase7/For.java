@@ -23,7 +23,10 @@ public class For {
 		//invertir();
 		
 		//6-
-		estrellas();
+		//estrellas();
+		
+		//7-
+		tabla();
 		
 
 	}
@@ -175,6 +178,14 @@ public class For {
 		}
 		
 		scanner.close();
+	}
+	
+	//7- Escribir un programa que muestre por pantalla la tabla de multiplicar del 1 al 10.
+	
+	public static void tabla() {
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("1 * " +i+ " = " +1*i);
+		}
 	}
 
 }
