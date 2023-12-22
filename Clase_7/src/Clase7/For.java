@@ -26,7 +26,10 @@ public class For {
 		//estrellas();
 		
 		//7-
-		tabla();
+		//tabla();
+		
+		//8-
+		triangulo();
 		
 
 	}
@@ -186,6 +189,35 @@ public class For {
 		for (int i = 1; i <= 10; i++) {
 			System.out.println("1 * " +i+ " = " +1*i);
 		}
+	}
+	
+	//8- Escribir un programa que pida al usuario un número entero y muestre por
+	//pantalla un triángulo rectángulo como el de más abajo.
+	//1
+	//3 1
+	//5 3 1
+	//7 5 3 1
+	//9 7 5 3 1
+	
+	public static void triangulo() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Dime un número entero");
+		int number = scanner.nextInt();
+		
+		if (number>=0 && number%number == 0) {
+			
+			 for (int i = 1; i <= number; i += 2) {
+		            for (int j = i; j >= 1; j -= 2) {
+		                System.out.print(j + " ");
+		            }
+		            System.out.println();
+		        }
+			
+		} else {
+			System.out.println("Introduce un número entero y positivo");
+		}
+	
 	}
 
 }
