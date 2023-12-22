@@ -1,5 +1,7 @@
 package Clase7;
 
+import java.text.DecimalFormat;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class For {
@@ -17,6 +19,9 @@ public class For {
 		
 		//4-
 		//esEntero();
+		
+		//5-
+		invertir();
 
 	}
 	
@@ -96,6 +101,44 @@ public class For {
 		}
 		
 		scanner.close();
+	}
+	
+	//5- Escribir un programa que pregunte al usuario una cantidad a invertir, el
+	//interés anual y el número de años, y muestre por pantalla el capital
+	//obtenido en la inversión cada año que dura la inversión.
+	//En plan:
+	//Inversión inicial: XXXX,XX€
+	//Año 1: YYYY,YY
+	//Año 2: ZZZZ,ZZ …
+	
+	public static void invertir() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Cantidad a invertir");
+		double inversion = scanner.nextDouble();
+		
+		System.out.println("Dime el interes anual en %");
+		double interesAnual = scanner.nextDouble();
+		
+		System.out.println("Dime el número de años");
+		int años = scanner.nextInt();
+		
+		double capital;
+        for (int i = 1; i <= años; ++i) {
+        	//igualo el capital a la fórmula del interes compuesto
+            capital = inversion * (1 + interesAnual / 100);
+            
+            //hago que inversión sea igual al capital anterior para emplearlo en la siguiente
+            inversion = capital;
+
+            DecimalFormat formato = new DecimalFormat("0.00");
+            String total = formato.format(capital);
+            
+            // Mostrar por pantalla el capital obtenido en cada año
+            System.out.println("Año " +i+ ": " +total);
+        }
+		
+        scanner.close();
 	}
 
 }
