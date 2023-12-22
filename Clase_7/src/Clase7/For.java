@@ -1,7 +1,6 @@
 package Clase7;
 
 import java.text.DecimalFormat;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class For {
@@ -21,7 +20,11 @@ public class For {
 		//esEntero();
 		
 		//5-
-		invertir();
+		//invertir();
+		
+		//6-
+		estrellas();
+		
 
 	}
 	
@@ -139,6 +142,39 @@ public class For {
         }
 		
         scanner.close();
+	}
+	
+	//6- Escribir un programa que pida al usuario un número entero y muestre por
+	//pantalla un triángulo rectángulo como el de más abajo, de altura el
+	//número introducido.
+	//*
+	//**
+	//***
+	//****
+	//*****
+	
+	public static void estrellas() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Dime un número");
+		int number = scanner.nextInt();
+		
+		//que el número sea positivo y entero
+		if (number>=0 && number%number == 0) {
+			
+			for (int i = 1; i <= number; i++) {
+				for (int j = 1; j <= i; j++) {
+					System.out.print("*");
+				}
+				System.out.println();
+			}
+			
+			
+		}else {
+			System.out.println("Escribe un número entero");
+		}
+		
+		scanner.close();
 	}
 
 }
