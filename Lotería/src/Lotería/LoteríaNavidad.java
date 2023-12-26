@@ -63,14 +63,35 @@ public class LoteríaNavidad {
 		
 		setDécimo(decimo2);
 		
-		System.out.println(getDécimo());
+		System.out.println("Tu número es " +getDécimo());
 		
 	}
+	
+	//8- Crear el método comprobarPremiosAltos que muestre por pantalla las siguientes
+	//frases según se cumplan:
+	
+	public static void comprobarPremiosAltos() {
+		
+		for (int i = 0; i < gordo.length; i++) {
+			
+			if (getDécimo() == gordo[i]) {
+				System.out.println("gordooo");
+			}
+			
+		
+			
+		}
+		
+	}
+	
+	//7-En el método main llamar a los métodos generarGordo(), printGordo() y
+	//comprarDecimo(), en ese mismo orden.
 	
 	public static void main(String[] args) {
 		generarGordo();
 		printGordo();
 		comprarDecimo();
+		comprobarPremiosAltos();
 		
 	}
 	
