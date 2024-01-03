@@ -35,7 +35,10 @@ public class For {
 		//password();
 		
 		//10-
-		primo();
+		//primo();
+		
+		//11-
+		letra();
 		
 
 	}
@@ -287,5 +290,31 @@ public class For {
 		 scanner.close();
 		
 	}
+	
+	//11- Escribir un programa en el que se pregunte al usuario por una frase y una
+	//letra, y muestre por pantalla el número de veces que aparece la letra en la
+	//frase.
+	
+	public static void letra() {
+		Scanner scanner = new Scanner(System.in);
+		
+		int acc = 0;
+		
+		System.out.println("Dime una frase");
+		String fraseString = scanner.next();
+		
+		System.out.println("Dime una letra");
+		char letra = scanner.next().toLowerCase().charAt(0);
+		
+		for (int i = 0; i < fraseString.length(); i++) {
+			 if (fraseString.charAt(i) == letra) {
+	                acc++;
+	            }
+		}
+		
+		System.out.println("La letra " +letra+ " se repite " +acc+ " veces");
+	}
+	
+	
 
 }
