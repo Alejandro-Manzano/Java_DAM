@@ -1,7 +1,6 @@
 package Clase7;
 
 import java.text.DecimalFormat;
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class For {
@@ -33,7 +32,10 @@ public class For {
 		//triangulo();
 		
 		//9-
-		password();
+		//password();
+		
+		//10-
+		primo();
 		
 
 	}
@@ -241,6 +243,7 @@ public class For {
 			   String passwordTwoString1 = scanner.next();
 
 	            // Verificar si la contraseña ingresada es correcta
+			   //Se ejecutará hasta que se alcance el break;
 	            if (!passwordTwoString1.equals(passwordString)) {
 	                System.out.println("Contraseña incorrecta. Inténtelo de nuevo.");
 	            } else {
@@ -250,6 +253,39 @@ public class For {
 	        } while (true);
 		   
 		  scanner.close();
+	}
+	
+	//10- Escribir un programa que pida al usuario un número entero y muestre por
+	//pantalla si es un número primo o no.
+	
+	public static void primo() {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		boolean esPrimo = true;
+		
+		System.out.println("Introduce un número entero");
+		int primo = scanner.nextInt();
+		
+		
+		 if (primo <= 1) {
+	            System.out.println("No es primo");
+	     } else {
+	    	 for (int i = 2; i < primo; i++) {
+		            if (primo % i == 0) {
+		                esPrimo = false;
+		            }
+		     }
+		     
+		     if (esPrimo == true) {
+				System.out.println(primo+ " ss primo");
+			} else {
+				System.out.println(primo+ " no es primo");
+			}
+		}
+
+		 scanner.close();
+		
 	}
 
 }
