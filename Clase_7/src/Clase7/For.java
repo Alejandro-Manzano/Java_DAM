@@ -1,6 +1,7 @@
 package Clase7;
 
 import java.text.DecimalFormat;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class For {
@@ -30,6 +31,9 @@ public class For {
 		
 		//8-
 		//triangulo();
+		
+		//9-
+		password();
 		
 
 	}
@@ -229,6 +233,23 @@ public class For {
 	
 	public static void password() {
 		String passwordString = "1234";
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		   do {
+			   System.out.println("Introduce la contraseña");
+			   String passwordTwoString1 = scanner.next();
+
+	            // Verificar si la contraseña ingresada es correcta
+	            if (!passwordTwoString1.equals(passwordString)) {
+	                System.out.println("Contraseña incorrecta. Inténtelo de nuevo.");
+	            } else {
+	                System.out.println("Contraseña correcta");
+	                break; // Salir del bucle si la contraseña es correcta
+	            }
+	        } while (true);
+		   
+		  scanner.close();
 	}
 
 }
