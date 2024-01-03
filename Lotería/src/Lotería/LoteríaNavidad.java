@@ -63,7 +63,11 @@ public class LoteríaNavidad {
 		
 		//setDécimo(décimo);
 		
-		System.out.println("Tu número es " +getDécimo());
+		if (décimo >= 0 && décimo <=99999) {
+			System.out.println("Tu número es " +getDécimo());
+		} else {
+			System.out.println("Introduce el número del 0 al 99999");
+		}
 		
 	}
 	
@@ -96,9 +100,25 @@ public class LoteríaNavidad {
 			}
 			else if (getDécimo() == gordo[2]-1 || getDécimo() == gordo[2]+1) {
 				System.out.println("960 euros");
+			} else {
+				System.out.println("No tienes premio");
 			}
 		
 	}
+	
+	
+	//EX1: Modificar crear el método comprarDecimo2() que compruebe lo que sea que el usuario
+	//escriba por consola y si lo que introdujo no es un número del 0 al 99999 que vuelva a
+	//preguntar por el décimo que se quiera comprar, después de avisar al usuario, tal que así:
+	
+	//EX2: modificar el método comprobarPremiosAltos para que devuelva un booleano, y en el caso
+	//de que sea falso, se llame al método comprobarPremiosBajos. Este método mostrará las
+	//siguientes frases según se cumplan:
+	//Centenas del 1.º, 2.º, 3.er y 4.º premio: 100 euros
+	//Números que coinciden con las dos últimas cifras del 1.º, 2.º y 3.er premio: 100 euros
+	//Reintegro (números que terminan en la misma cifra que el Gordo): 20 euro
+	//Si no se da ninguno de los casos anteriores, imprimir &quot;Qué mala suerte tienes, ni se te ocurra
+	//jugar&quot;
 	
 	//8-En el método main llamar a los métodos generarGordo(), printGordo() y
 	//comprarDecimo(), en ese mismo orden.
