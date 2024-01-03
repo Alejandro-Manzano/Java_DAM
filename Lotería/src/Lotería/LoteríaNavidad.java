@@ -58,33 +58,49 @@ public class LoteríaNavidad {
 	public static void comprarDecimo() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Dime que número de lotería quieres comprar");
-		int decimo2 = scanner.nextInt();
+		décimo = scanner.nextInt();
 		scanner.close();
 		
-		setDécimo(decimo2);
+		//setDécimo(décimo);
 		
 		System.out.println("Tu número es " +getDécimo());
 		
 	}
 	
-	//8- Crear el método comprobarPremiosAltos que muestre por pantalla las siguientes
+	//7- Crear el método comprobarPremiosAltos que muestre por pantalla las siguientes
 	//frases según se cumplan:
 	
 	public static void comprobarPremiosAltos() {
 		
-		for (int i = 0; i < gordo.length; i++) {
 			
-			if (getDécimo() == gordo[i]) {
-				System.out.println("gordooo");
+			if (getDécimo() == gordo[0]) {
+				System.out.println("400.000 euros");
+			} 
+			else if (getDécimo() == gordo[1]) {
+				System.out.println("125.000 euros");
 			}
-			
-		
-			
-		}
+			else if (getDécimo() == gordo[2]) {
+				System.out.println("50.000 euros");
+			}
+			else if (getDécimo() == gordo[3]) {
+				System.out.println("20.000 euros");
+			}
+			else if (getDécimo() == gordo[4]) {
+				System.out.println("6.000 euros");
+			}
+			else if (getDécimo() == gordo[0]-1 || getDécimo() == gordo[0]+1) {
+				System.out.println("2000 euros");
+			}
+			else if (getDécimo() == gordo[1]-1 || getDécimo() == gordo[1]+1) {
+				System.out.println("1250 euros");
+			}
+			else if (getDécimo() == gordo[2]-1 || getDécimo() == gordo[2]+1) {
+				System.out.println("960 euros");
+			}
 		
 	}
 	
-	//7-En el método main llamar a los métodos generarGordo(), printGordo() y
+	//8-En el método main llamar a los métodos generarGordo(), printGordo() y
 	//comprarDecimo(), en ese mismo orden.
 	
 	public static void main(String[] args) {

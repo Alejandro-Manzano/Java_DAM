@@ -205,6 +205,8 @@ public class For {
 		System.out.println("Dime un número entero");
 		int number = scanner.nextInt();
 		
+		scanner.close();
+		
 		if (number>=0 && number%number == 0) {
 			
 			 for (int i = 1; i <= number; i += 2) {
@@ -220,12 +222,13 @@ public class For {
 	
 	}
 	
+	
 	//9- Escribir un programa que almacene la cadena de caracteres contraseña en
 	//una variable, pregunte al usuario por la contraseña hasta que introduzca
 	//la contraseña correcta.
 	
 	public static void password() {
-		
+		String passwordString = "1234";
 	}
 
 }

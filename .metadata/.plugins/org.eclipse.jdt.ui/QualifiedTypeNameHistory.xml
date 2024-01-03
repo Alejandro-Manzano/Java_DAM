@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.Float"/>
-    <fullyQualifiedTypeName name="javax.sql.rowset.JoinRowSet"/>
     <fullyQualifiedTypeName name="java_e.elseIf"/>
     <fullyQualifiedTypeName name="java_e.doWhile"/>
     <fullyQualifiedTypeName name="javax.naming.ServiceUnavailableException"/>
@@ -12,7 +11,6 @@
     <fullyQualifiedTypeName name="java_e.Arrays"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="int"/>
     <fullyQualifiedTypeName name="javax.naming.LimitExceededException"/>
     <fullyQualifiedTypeName name="java.util.jar.Attributes.Name"/>
     <fullyQualifiedTypeName name="java.lang.NegativeArraySizeException"/>
@@ -22,14 +20,20 @@
     <fullyQualifiedTypeName name="medicalCenter.UIMenu"/>
     <fullyQualifiedTypeName name="ejercicios_Practicos.Perro"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="javax.net.ssl.SSLContext"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="java.math.RoundingMode"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Character"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.TextUI"/>
+    <fullyQualifiedTypeName name="java.lang.EnumConstantNotPresentException"/>
+    <fullyQualifiedTypeName name="javax.sql.rowset.JoinRowSet"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="int"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="Lotería.LoteríaNavidad"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
