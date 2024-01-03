@@ -107,6 +107,8 @@ public class LoteríaNavidad {
 	}
 	
 	
+	
+	
 	//EX1: Modificar crear el método comprarDecimo2() que compruebe lo que sea que el usuario
 	//escriba por consola y si lo que introdujo no es un número del 0 al 99999 que vuelva a
 	//preguntar por el décimo que se quiera comprar, después de avisar al usuario, tal que así:
