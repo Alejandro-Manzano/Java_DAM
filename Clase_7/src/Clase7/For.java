@@ -1,6 +1,7 @@
 package Clase7;
 
 import java.text.DecimalFormat;
+import java.time.Year;
 import java.util.Scanner;
 
 public class For {
@@ -38,7 +39,10 @@ public class For {
 		//primo();
 		
 		//11-
-		letra();
+		//letra();
+		
+		//12-
+		eco();
 		
 
 	}
@@ -313,8 +317,34 @@ public class For {
 		}
 		
 		System.out.println("La letra " +letra+ " se repite " +acc+ " veces");
+		
+		scanner.close();
 	}
 	
+	//12- Escribir un programa que muestre el eco de todo lo que el usuario
+	//introduzca (es decir, que repita la palabra o frase que el usuario escriba)
+	//hasta que el usuario escriba “fin” que terminará.
 	
+	public static void eco() {
+		
+		Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Introduce palabras o frases (escribe 'fin' para terminar):");
+
+        while (true) {
+            String entrada = scanner.nextLine();
+
+            //ignora mayusculas y minusculas
+            if (entrada.equalsIgnoreCase("fin")) {
+                System.out.println("Programa terminado.");
+                break;  
+            } else {
+                System.out.println("Eco: " + entrada);
+            }
+        }
+
+        scanner.close();
+		
+	}
 
 }
