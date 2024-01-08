@@ -41,7 +41,10 @@ public class For {
 		//letra();
 		
 		//12-
-		eco();
+		//eco();
+		
+		//13-
+		vocal();
 		
 
 	}
@@ -349,6 +352,33 @@ public class For {
 	//13- Algoritmo que pida caracteres e imprima ‘VOCAL’ si son vocales y ‘NO
 	//VOCAL’ en caso contrario, el programa termina cuando se introduce un
 	//espacio.
+	
+	 public static void vocal() {
+	        Scanner scanner = new Scanner(System.in);
+
+	        
+	        System.out.println("Escribe una vocal");
+	        
+	       while (true) {
+			
+	    	   String input = scanner.next().toLowerCase();
+	    	   // Obtener el primer carácter
+	    	   char caracter = input.charAt(0);
+	    	   
+	    	   // Verificar si es una vocal
+		        if (caracter == 'a' || caracter == 'e' || caracter == 'i' || caracter == 'o' || caracter == 'u') {
+		            System.out.println("Es vocal");
+		        } else {
+		            System.out.println("No es vocal");
+		        }
+		        
+		        if (input == " ") {
+					System.out.println("Programa terminado");
+					break;
+				}
+			
+	       } 
+	    }
 	
 	
 
