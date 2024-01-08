@@ -1,7 +1,6 @@
 package Clase7;
 
 import java.text.DecimalFormat;
-import java.time.Year;
 import java.util.Scanner;
 
 public class For {
@@ -346,5 +345,11 @@ public class For {
         scanner.close();
 		
 	}
+	
+	//13- Algoritmo que pida caracteres e imprima ‘VOCAL’ si son vocales y ‘NO
+	//VOCAL’ en caso contrario, el programa termina cuando se introduce un
+	//espacio.
+	
+	
 
 }
