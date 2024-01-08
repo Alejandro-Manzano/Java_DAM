@@ -372,14 +372,13 @@ public class For {
 		            System.out.println("No es vocal");
 		        }
 		        
-		        if (input == " ") {
+		        if (input.equals(" ")) {
 					System.out.println("Programa terminado");
 					break;
 				}
 			
 	       } 
-	    }
-	
-	
+	       scanner.close();
+	  }
 
 }
