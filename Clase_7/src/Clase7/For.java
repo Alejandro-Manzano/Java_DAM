@@ -361,7 +361,7 @@ public class For {
 	        
 	       while (true) {
 			
-	    	   String input = scanner.next().toLowerCase();
+	    	   String input = scanner.nextLine().toLowerCase();
 	    	   // Obtener el primer carácter
 	    	   char caracter = input.charAt(0);
 	    	   
