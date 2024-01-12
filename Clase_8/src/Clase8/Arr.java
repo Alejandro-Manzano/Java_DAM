@@ -2,6 +2,7 @@ package Clase8;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Arr {
@@ -23,7 +24,10 @@ public class Arr {
 		//ex04(numerosGanadores[0], numerosGanadores[1], numerosGanadores[2]);
 		
 		//5-
-		ex05();
+		//ex05();
+		
+		//6-
+		ex06();
 		
 	}
 	
@@ -122,4 +126,38 @@ public class Arr {
 		
 		System.out.println(Arrays.toString(numbers));
 	}
+	
+	//6- Escribe un programa que en el que cree un array bidimensional cuyo
+	//número de filas y columnas se le pase al método en la llamada. El método
+	//rellenará el array con números aleatorios (del 0 a 9). Finalmente, debe
+	//imprimir la tabla tal que así
+	//0123
+	//1234
+	//2345
+	
+	public static void ex06() {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Dime el número de filas");
+		int filas = scanner.nextInt();
+		
+		System.out.println("Dime el número de columnas");
+		int columnas = scanner.nextInt();
+		
+		int [][] aleatorios = new int [filas][columnas];
+		
+		for (int i = 0; i < filas; i++) {
+			for (int j = 0; j < columnas; j++) {
+				
+				//Genero un número aleatorio hasta el 9
+				Random random = new Random();
+				int numeroAleatorio = random.nextInt(10);
+				
+				System.out.print(aleatorios[i][j] = numeroAleatorio);
+				
+			}
+			System.out.println();
+		}
+	}
+	
 }
