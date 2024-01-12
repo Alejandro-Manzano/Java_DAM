@@ -1,5 +1,7 @@
 package Clase8;
 
+import java.util.Scanner;
+
 public class Arrays {
 
 	public static void main(String[] args) {
@@ -8,6 +10,11 @@ public class Arrays {
 		//1-
 		//ex1();
 		
+		//2-
+		//ex2();
+		
+		//3-
+		ex3();
 	}
 	
 	//1- Escribir un programa que almacene las asignaturas de un curso (por
@@ -39,5 +46,26 @@ public class Arrays {
 		}
 		
 	}
+	
+	//3-Modifica el programa anterior para que te pregunte “¿Qué nota sacaste
+	//en &lt;asignatura&gt;?, el usuario introduzca la nota, y finalmente imprima por
+	//pantalla: “Sacaste un &lt;nota&gt; en &lt;asignatura&gt;”.
 
+	
+	public static void ex3() {
+		
+		String asignaturas[] = {"Física", "Química", "Historia", "Lengua"};
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		for (int i = 0; i < asignaturas.length; i++) {
+			
+			System.out.println("Que nota sacaste en " +asignaturas[i]);
+			int respuesta = scanner.nextInt();
+			System.out.println("Has sacado un " +respuesta+ " en " +asignaturas[i]);
+		}
+		
+		scanner.close();
+		
+	}
 }
