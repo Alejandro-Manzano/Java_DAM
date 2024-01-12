@@ -1,6 +1,7 @@
 package Clase8;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Arr {
@@ -18,8 +19,11 @@ public class Arr {
 		//ex3();
 		
 		//4-
-		int numerosGanadores[] = {22678, 22445, 46789};
-		ex04(numerosGanadores[0], numerosGanadores[1], numerosGanadores[2]);
+		//int numerosGanadores[] = {22678, 22445, 46789};
+		//ex04(numerosGanadores[0], numerosGanadores[1], numerosGanadores[2]);
+		
+		//5-
+		ex05();
 		
 	}
 	
@@ -94,5 +98,28 @@ public class Arr {
 		//Esto imprime todo el array directamente
 		System.out.println("Números ganadores ordenados de menor a mayor: " + Arrays.toString(ganadores));
 		
+	}
+	
+	//5 - Escribir un programa que cree e inicialice un array con los números del 1 al
+	//10 y los muestre por pantalla en orden inverso separados por comas. (Hay
+	//que usar dos clases de java.util)
+	
+	public static void ex05() {
+		Integer[] numbers = new Integer[10];
+		
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = i+1;
+		}
+		
+		//1ª opción
+		//for (int i = numbers.length-1; i >=0; i--) {
+			//System.out.print(numbers[i] + ", ");
+		//}
+		
+		//2ª opción
+		//Lo imprimo del reves con el método Collections.reverseOrder()
+		Arrays.sort(numbers, Collections.reverseOrder());
+		
+		System.out.println(Arrays.toString(numbers));
 	}
 }
