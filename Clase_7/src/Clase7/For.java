@@ -23,7 +23,7 @@ public class For {
 		//invertir();
 		
 		//6-
-		//estrellas();
+		estrellas();
 		
 		//7-
 		//tabla();
@@ -44,7 +44,7 @@ public class For {
 		//eco();
 		
 		//13-
-		vocal();
+		//vocal();
 		
 
 	}
