@@ -1,8 +1,9 @@
 package Clase8;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class Arrays {
+public class Arr {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,7 +15,12 @@ public class Arrays {
 		//ex2();
 		
 		//3-
-		ex3();
+		//ex3();
+		
+		//4-
+		int numerosGanadores[] = {22678, 22445, 46789};
+		ex04(numerosGanadores[0], numerosGanadores[1], numerosGanadores[2]);
+		
 	}
 	
 	//1- Escribir un programa que almacene las asignaturas de un curso (por
@@ -66,6 +72,27 @@ public class Arrays {
 		}
 		
 		scanner.close();
+		
+	}
+	
+	//4- Escribir un programa en el que se le pase en la llamada al método los 3
+	//números ganadores de la lotería, los almacene en un array, y los muestre
+	//por pantalla ordenados de menor a mayor. (Hay que usar una clase de
+	//java.util)
+	
+	public static void ex04(int x, int y, int z) {
+		
+		int[] ganadores = new int[3];
+
+		ganadores[0] = x;
+		ganadores[1] = y;
+		ganadores[2] = z;
+		
+		
+		Arrays.sort(ganadores);
+		
+		//Esto imprime todo el array directamente
+		System.out.println("Números ganadores ordenados de menor a mayor: " + Arrays.toString(ganadores));
 		
 	}
 }
