@@ -29,6 +29,9 @@ public class Arr {
 		//6-
 		//ex06();
 		
+		//7-
+		//ex07();
+		
 	}
 	
 	//1- Escribir un programa que almacene las asignaturas de un curso (por
@@ -168,6 +171,36 @@ public class Arr {
 	
 	public static void ex07() {
 		
+		Scanner scanner = new Scanner(System.in);
+		
+		int acc = 0;
+		
+		String[][] asignaturas = {
+	            {"Matemáticas", "Historia", "Programación"},
+	            {"Física", "Literatura", "Inglés"},
+	            {"Química", "Economía", "Biología"}
+	        };
+		
+		String [] repetir = new String [asignaturas.length];
+		
+		for (int i = 0; i < asignaturas.length; i++) {
+			for (int j = 0; j < asignaturas[i].length; j++) {
+				System.out.println("Dime tu nota en " +asignaturas[i][j]);
+				int nota = scanner.nextInt();
+				
+				if (nota<5) {
+					repetir[acc] = asignaturas[i][j];
+					acc++;
+				}
+			}
+		}
+		
+		for (int i = 0; i < repetir.length; i++) {
+			if (repetir[i] != null) {
+				System.out.println("Debes repetir " +repetir[i]);
+			}
+		}
+		scanner.close();
 	}
 	
 }
