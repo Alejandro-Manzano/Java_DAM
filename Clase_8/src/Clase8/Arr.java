@@ -27,7 +27,7 @@ public class Arr {
 		//ex05();
 		
 		//6-
-		ex06();
+		//ex06();
 		
 	}
 	
@@ -158,6 +158,16 @@ public class Arr {
 			}
 			System.out.println();
 		}
+		scanner.close();
+	}
+	
+	//7- Usando un array bidimensional, escribir un programa que almacena las
+	//asignaturas de un curso en el array, y luego pregunte al usuario por su
+	//nota y, finalmente, el programa muestre por pantalla solo las asignaturas
+	//que el usuario deba repetir.
+	
+	public static void ex07() {
+		
 	}
 	
 }
