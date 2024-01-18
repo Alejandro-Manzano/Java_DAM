@@ -184,6 +184,7 @@ public class Arr {
 		String [] repetir = new String [asignaturas.length];
 		
 		for (int i = 0; i < asignaturas.length; i++) {
+			
 			for (int j = 0; j < asignaturas[i].length; j++) {
 				System.out.println("Dime tu nota en " +asignaturas[i][j]);
 				int nota = scanner.nextInt();
