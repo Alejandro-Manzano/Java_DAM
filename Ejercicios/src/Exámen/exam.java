@@ -11,7 +11,7 @@ public class exam {
 		
 	}
 	
-	//Escribir un programa que convierta de euros a dólares. El resultado
+	//1- Escribir un programa que convierta de euros a dólares. El resultado
 	//saldrá por consola con dos decimales redondeados hacia arriba
 	
 	public static void ex01() {
@@ -26,10 +26,14 @@ public class exam {
         double cantidadDolares = Math.ceil(cantidadEuros * tasa * 100) / 100;
 
         // Mostrar el resultado con dos decimales
-        DecimalFormat formato = new DecimalFormat("#.##");
+        DecimalFormat formato = new DecimalFormat("0.00");
         String resultadoFormateado = formato.format(cantidadDolares);
 
+        Math.round(cantidadDolares);
+        
         System.out.println("Cantidad en euros: " + cantidadEuros);
         System.out.println("Cantidad en dólares (redondeado hacia arriba): " + resultadoFormateado+ " $");
+        
+        scanner.close();
 	}
 }
