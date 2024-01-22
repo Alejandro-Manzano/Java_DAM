@@ -15,6 +15,8 @@ public class exam {
 		
 		//ex04();
 		
+		 double resultado = Math.pow(3, 3);
+		System.out.println(resultado);
 	}
 	
 	//1- Escribir un programa que convierta de euros a dólares. El resultado
