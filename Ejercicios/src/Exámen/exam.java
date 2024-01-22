@@ -11,7 +11,9 @@ public class exam {
 		
 		//ex02();
 		
-		ex03();
+		//ex03();
+		
+		//ex04();
 		
 	}
 	
@@ -80,5 +82,51 @@ public class exam {
 		scanner.close();
 		
 	}
+	
+	//4- Escribir un programa que introduzca las edades de una serie de alumnos,
+	//y que se detendrá al introducir un número negativo. Se calculara la suma, la media
+	//y el número de alumnos con más de 18 años
+	
+	public static void ex04() {
+		
+		  Scanner scanner = new Scanner(System.in);
+
+	        int sumaEdades = 0;
+	        int cantidadAlumnos = 0;
+	        int cantidadAlumnosMayores18 = 0;
+
+	        System.out.println("Introduce las edades de los alumnos (introduce un número negativo para finalizar):");
+
+	        while (true) {
+	            System.out.print("Edad del alumno: ");
+	            int edad = scanner.nextInt();
+
+	            // Verificar si se debe salir del bucle
+	            if (edad < 0) {
+	                break;
+	            }
+
+	            // Actualizar la suma y la cantidad de alumnos
+	            sumaEdades += edad;
+	            cantidadAlumnos++;
+
+	            // Verificar si el alumno tiene más de 18 años
+	            if (edad > 18) {
+	                cantidadAlumnosMayores18++;
+	            }
+	        }
+
+	        // Calcular la media
+	        double mediaEdades = (double)sumaEdades / cantidadAlumnos;
+	        
+
+	        // Mostrar resultados
+	        System.out.println("Suma de edades: " + sumaEdades);
+	        System.out.println("Media de edades: " + mediaEdades);
+	        System.out.println("Número de alumnos con más de 18 años: " + cantidadAlumnosMayores18);
+
+	        scanner.close();
+	}
+	
 	
 	}
