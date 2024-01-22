@@ -7,7 +7,11 @@ public class exam {
 
 	public static void main(String[] args) {
 		
-		ex01();
+		//ex01();
+		
+		//ex02();
+		
+		ex03();
 		
 	}
 	
@@ -36,4 +40,45 @@ public class exam {
         
         scanner.close();
 	}
-}
+	
+	//2- Emplear la fórmula de la gravitación universal
+	
+	public static void ex02() {
+		
+		double G = 6.673e-11;
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Introduce m1");
+		double m1 = scanner.nextDouble();
+		
+		System.out.println("Dime m2");
+		double m2 = scanner.nextDouble();
+		
+		System.out.println("Dime d");
+		double d = scanner.nextDouble();
+		double d2 = d*d;
+		
+		double F = (G * m1 * m2)/ d2;
+		
+		System.out.println("El resultado es F = " +F+ " N");
+		
+		scanner.close();
+	}
+	
+	public static void ex03() {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Diem tu DNI");
+		int DNI = scanner.nextInt();
+		
+		int letra = DNI%23;
+		
+		System.out.println(letra);
+		
+		scanner.close();
+		
+	}
+	
+	}
