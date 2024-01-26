@@ -1,10 +1,14 @@
 package Exámen;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Repaso {
 
 	public static void main(String[] args) {
 		
 		//ex01();
+		ex02();
 
 	}
 	
@@ -44,16 +48,36 @@ public class Repaso {
 		
 	}
 	
-	//2- En una clase llamada Ejercicio2 escribe un programa Java que realice las acciones siguientes definiendo, además del método main, todos los métodos adicionales que se consideren necesarios:
+	//2- En una clase llamada Ejercicio2 escribe un programa Java que realice las acciones siguientes definiendo, además del método main,
+	//todos los métodos adicionales que se consideren necesarios:
 	//Crear un array de un tamaño aleatorio entre 10 y 50.
 	//Usando la clase Math, almacenar en el array números aleatorios comprendidos entre -1000 y 1000 y con una precisión de dos decimales.
 	//Obtener el resultado de procesar el contenido del array de la forma siguiente:
 	//Se sumarán los valores almacenados comenzando desde la posición cero en adelante.
-	//Si en cualquier momento del proceso de cálculo de la suma ésta supera la mitad del valor máximo posible, el resultado final será el 33,33% del valor obtenido hasta ese momento, y no se sumarán el resto de los números almacenados en el array.
+	//Si en cualquier momento del proceso de cálculo de la suma ésta supera la mitad del valor máximo posible, el resultado final será el 33,33% 
+	//del valor obtenido hasta ese momento, y no se sumarán el resto de los números almacenados en el array.
 	//Si no se produce la situación anterior, el resultado final será el 66,66% de la suma obtenida.
 
 	
 	public static void ex02() {
 		
+		//Número aleatorio paar el array , random genera entre 0 y 1 , floor lo redondea y 41 lo ultiplica
+		int tamañoArray = (int) Math.floor(Math.random() * 41) + 10;
+		
+		int [] array = new int[tamañoArray];
+		
+		int sumaNumeros = 0;
+
+		for (int i = 0; i < array.length; i++) {
+			
+			//Número aleatorio en -1000 y 1000
+			int numAleatorio = (int)Math.floor(Math.random() * 2001) -1000;
+			
+			array[i] = numAleatorio;
+			sumaNumeros += array[i];
+		}
+		
+		System.out.println(Arrays.toString(array));
+		System.out.println(sumaNumeros);
 	}
 }
