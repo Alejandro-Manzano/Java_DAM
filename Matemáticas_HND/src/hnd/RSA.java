@@ -29,6 +29,28 @@ public class RSA {
 
         return 0; // Cambia esto según tu implementación
     }
+    public class MCM {
+
+        public static int mcm(int n1, int n2) {
+            int mcd = mcd(n1, n2);
+            return mcd * Math.max(n1, n2);
+        }
+
+        private static int mcd(int n1, int n2) {
+            if (n1 % n2 == 0) {
+                return n2;
+            } else {
+                return mcd(n2, n1 % n2);
+            }
+        }
+
+        public static void main(String[] args) {
+            int n1 = 12;
+            int n2 = 20;
+            int mcm = mcm(n1, n2);
+            System.out.println(mcm);
+        }
+    }
 }
 
 
