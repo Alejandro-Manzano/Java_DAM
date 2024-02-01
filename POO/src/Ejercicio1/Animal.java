@@ -18,6 +18,10 @@ public class Animal {
 			setDate(hoyDate);
 		}
 		
+		public String toString() {
+			return "Nombre" + getNombre() + "Edad";
+		}
+		
 		public String getNombre() {
 			return nombre;
 		}
