@@ -8,7 +8,7 @@ public class Manzano1AlejandroB {
 
 	public static void main(String[] args) {
 		
-		//ex01();
+		ex01();
 		
 		//ex02();
 		
@@ -18,7 +18,7 @@ public class Manzano1AlejandroB {
 		
 		//ex05();
 		
-		ex06();
+		//ex06();
 
 	}
 	
