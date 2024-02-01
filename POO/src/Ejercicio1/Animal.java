@@ -19,7 +19,7 @@ public class Animal {
 		}
 		
 		public String toString() {
-			return "Nombre" + getNombre() + "Edad";
+			return "Nombre: - " + getNombre() + " - Edad: - " + getDate();
 		}
 		
 		public String getNombre() {
