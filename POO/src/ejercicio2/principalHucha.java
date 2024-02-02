@@ -27,7 +27,18 @@ public class principalHucha {
 		
 		System.out.println("Tengo " + getMonedas()[0] + " monedas de 1$ ");
 		System.out.println("Tengo " + getMonedas()[1] + " monedas de 2$ ");
+		System.out.println("Tengo " + getBilletes()[0] + " billetes de 5$ ");
+		System.out.println("Tengo " + getBilletes()[1] + " billetes de 10$ ");
+		System.out.println("Tengo " + getBilletes()[2] + " billetes de 15$ ");
+		System.out.println("Tengo " + getBilletes()[3] + " billetes de 20$ ");
+		System.out.println("Tengo " + getMonedas() + " $ en la ducha ");
 		
+	}
+	
+	private int dineroTotal() {
+		int total = getMonedas()[0]*1 + getMonedas()[1]*2 + getMonedas()[0]*5 + 
+				getBilletes()[1] + getBilletes()[2]*20 + getBilletes()[3]*50;
+		return total;
 	}
 	
 	
