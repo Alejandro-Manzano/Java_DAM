@@ -29,9 +29,29 @@ public class principalHucha {
 		System.out.println("Tengo " + getMonedas()[1] + " monedas de 2$ ");
 		System.out.println("Tengo " + getBilletes()[0] + " billetes de 5$ ");
 		System.out.println("Tengo " + getBilletes()[1] + " billetes de 10$ ");
-		System.out.println("Tengo " + getBilletes()[2] + " billetes de 15$ ");
-		System.out.println("Tengo " + getBilletes()[3] + " billetes de 20$ ");
+		System.out.println("Tengo " + getBilletes()[2] + " billetes de 20$ ");
+		System.out.println("Tengo " + getBilletes()[3] + " billetes de 50$ ");
 		System.out.println("Tengo " + getMonedas() + " $ en la ducha ");
+		
+	}
+	
+	public void cambiarConstraseña(String passwordActual, String passwordNueva) {
+		if (getPasswordString() == passwordActual) {
+			this.passwordString = passwordNueva;
+		} else {
+			System.out.println("Contraseña incorrecta");
+		}
+	}
+	
+	public void abrirHucha(String passwotString) {
+		
+		if (isEstaAbierta() == true) {
+			System.out.println("Ya está abierta burro");
+		} else if (passwotString.equals(getPasswordString())) {
+			setEstaAbierta(true);
+		} else {
+			System.out.println("Contraseá incorrecta");
+		}
 		
 	}
 	
