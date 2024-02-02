@@ -20,7 +20,9 @@ public class principalHucha {
 	int [] billetes = new int [4];
 	
 	public principalHucha() {
-		
+		monedas[0] = 2;
+		monedas[1] = 6;
+		billetes[0] = 3;
 	}
 	
 	public void dineroHucha() {
@@ -51,6 +53,18 @@ public class principalHucha {
 			setEstaAbierta(true);
 		} else {
 			System.out.println("Contraseá incorrecta");
+		}
+		
+	}
+	
+	public void cerrarHucha(String passwotString) {
+		
+		if (isEstaAbierta() == false) {
+			System.out.println("Ya está cerrado burro");
+		} else if (passwotString.equals(getPasswordString())) {
+			setEstaAbierta(false);
+		} else {
+			System.out.println("Contraseña incorrecta");
 		}
 		
 	}
