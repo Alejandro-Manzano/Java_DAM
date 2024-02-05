@@ -25,8 +25,14 @@ public class Hucha {
 		billetes[0] = 3;
 	}
 	
-	public void retirarDinero() {
-		
+	public void retirarDinero(int dinero) {
+		if (dinero <= 0) {
+			System.out.println("introduzca un númro positivo");
+		} else if (dinero > dineroTotal()) {
+			System.out.println("No tienes suficiente dinero, se procederá a sacar todo el dinero que tengas");
+			System.out.println("Retiraste " + dineroTotal()+ " $");
+			
+		}
 		
 	}
 	
@@ -40,6 +46,15 @@ public class Hucha {
 		System.out.println("Tengo " + getBilletes()[3] + " billetes de 50$ ");
 		System.out.println("Tengo " + getMonedas() + " $ en la ducha ");
 		
+	}
+	
+	private void vaciarCuenta() {
+		for (int moneda: monedas) {
+			moneda = 0;
+		}
+		for (int billete : billetes) {
+			billete=0;
+		}
 	}
 	
 	public void cambiarConstraseña(String passwordActual, String passwordNueva) {
