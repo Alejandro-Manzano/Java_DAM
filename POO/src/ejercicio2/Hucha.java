@@ -31,7 +31,7 @@ public class Hucha {
 		} else if (dinero > dineroTotal()) {
 			System.out.println("No tienes suficiente dinero, se procederá a sacar todo el dinero que tengas");
 			System.out.println("Retiraste " + dineroTotal()+ " $");
-			
+			vaciarCuenta();
 		}
 		
 	}
