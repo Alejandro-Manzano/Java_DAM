@@ -25,6 +25,11 @@ public class Hucha {
 		billetes[0] = 3;
 	}
 	
+	public void retirarDinero() {
+		
+		
+	}
+	
 	public void dineroHucha() {
 		
 		System.out.println("Tengo " + getMonedas()[0] + " monedas de 1$ ");
