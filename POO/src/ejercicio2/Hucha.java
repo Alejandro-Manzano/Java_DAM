@@ -23,6 +23,7 @@ public class Hucha {
 		monedas[0] = 2;
 		monedas[1] = 6;
 		billetes[0] = 3;
+		
 	}
 	
 	public void retirarDinero(int dinero) {
@@ -32,6 +33,8 @@ public class Hucha {
 			System.out.println("No tienes suficiente dinero, se procederá a sacar todo el dinero que tengas");
 			System.out.println("Retiraste " + dineroTotal()+ " $");
 			vaciarCuenta();
+		} else {
+			
 		}
 		
 	}
