@@ -24,6 +24,7 @@ public class Hucha {
 		monedas[1] = 6;
 		billetes[0] = 3;
 		
+		
 	}
 	
 	public void retirarDinero(int dinero) {
