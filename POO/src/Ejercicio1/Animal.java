@@ -3,39 +3,47 @@ package Ejercicio1;
 import java.time.LocalDate;
 
 public class Animal {
+	
+	String nombre;
+	
+	LocalDate fecha;
+	
+	public Animal(String mote, LocalDate hoy) {
+		setNombre(mote);
+		setFecha(hoy);
 		
-		String nombre;
-		LocalDate date;
-
-		public Animal(String nombre, LocalDate date) {
-			setNombre(nombre);
-			setDate(date);
-		}
+	}
+	public Animal(String mote) {
+		setNombre(mote);
+		LocalDate hoy = LocalDate.now();
+		setFecha(hoy);
+	}
+	
+	public String toString() {
 		
-		public Animal(String mote) {
-			setNombre(mote);
-			LocalDate hoyDate = LocalDate.of(2024, 02, 01);
-			setDate(hoyDate);
-		}
+		return "Nombre: " + getNombre() + 	" - Fecha de Nacimiento: " + getFecha();
 		
-		public String toString() {
-			return "Nombre: - " + getNombre() + " - Edad: - " + getDate();
-		}
-		
-		public String getNombre() {
-			return nombre;
-		}
-
-		public void setNombre(String nombre) {
-			this.nombre = nombre;
-		}
-
-		public LocalDate getDate() {
-			return date;
-		}
-
-		public void setDate(LocalDate date) {
-			this.date = date;
-		}
-
+	}
+	
+	
+	
+	
+	
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public LocalDate getFecha() {
+		return fecha;
+	}
+	
+	public void setFecha(LocalDate fecha) {
+		this.fecha = fecha;
+	}
 }
