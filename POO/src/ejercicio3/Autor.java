@@ -38,6 +38,7 @@ public class Autor {
 		
 	}
 	
+	
 	public void setGenero(String genero) {
 		if (genero.toLowerCase().equals("masculino")||genero.equalsIgnoreCase("femenino"))
 			this.genero = genero;
@@ -47,25 +48,13 @@ public class Autor {
 			String input = "";
 			while (!input.equalsIgnoreCase("masculino")&&!input.equalsIgnoreCase("femenino"))
 			{
-				System.out.println("Introduce uno de los siguientes géneros válidos: \"masculino\" o \"femenino\"");
+				System.out.println("Introduce uno de los siguientes gï¿½neros vï¿½lidos: \"masculino\" o \"femenino\"");
 				input = s.nextLine();
 			}
 			s.close();
 			this.genero = input;
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	public String getNombre() {
