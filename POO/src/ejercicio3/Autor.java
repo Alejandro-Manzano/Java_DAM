@@ -15,6 +15,7 @@ public class Autor {
 		setGenero(genero);
 	}
 	
+	
 	public String toString()
 	{
 		return getNombre() + " (" + getGenero() + ") "+ getEmail();
