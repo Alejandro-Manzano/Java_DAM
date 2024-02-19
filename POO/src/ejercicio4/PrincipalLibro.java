@@ -8,8 +8,23 @@ public class PrincipalLibro {
 
 	public static void main(String[] args) {
 		Autor autora = new Autor("JK Rowling", "jk@hola.com", "femenino");
+		
 		ArrayList<Autor> autores = new ArrayList<Autor>();
 		autores.add(autora);
+		//autores.add(7);
+		
+		ArrayList a = new ArrayList();
+		a.add(autores);
+		a.add(7);
+		a.add("7");
+		a.add('7');
+		a.add(new Libro("Harry Potter y la Cámara de los Secretos", autores, 17.95f));
+		
+		
+		
+		
+		autores.add(1, autora);
+		autores.set(2, autora);
 
 		Libro hp = new Libro("Harry Potter y la Cámara de los Secretos", autores, 17.95f);
 		hp.toString();
