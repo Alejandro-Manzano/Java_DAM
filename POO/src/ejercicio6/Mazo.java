@@ -101,6 +101,7 @@ public class Mazo {
 			}
 			
 			
+			
 			else
 			{
 				if (i == 1){
