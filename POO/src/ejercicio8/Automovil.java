@@ -1,86 +1,115 @@
 package ejercicio8;
 
-import java.util.Scanner;
-
 public class Automovil {
 	
 	String modelo;
 	int capacidad;
-	int combustible;
+	double combustibleActual;
 	double consumo;
-	int kilometros;
+	int kilometrosRecorridos;
 	int combustibleConsumido;
 	
-	public Automovil(String modelo, int capacidad, int combustible, double consumo, int kilometros, int combustibleConsumido) {
-		setModelo(modelo);
-		setCapacidad(capacidad);
-		setCombustible(combustibleConsumido);
-		setConsumo(consumo);
-		setKilometros(0);
+	public Automovil(String modelo, int capacidad, double combustibleActual, double consumo) {
+		this.modelo = modelo;
+		this.capacidad = capacidad;
+		this.combustibleActual = combustibleActual;
+		this.consumo = consumo;
+		setKilometrosRecorridos(0);
 		setCombustibleConsumido(0);
 	}
 	
 	public Automovil(String modelo, int capacidad, double consumo) {
-		setModelo(modelo);
-		setCapacidad(capacidad);
-		setCombustible(getCapacidad());
-		setConsumo(consumo);
-		setKilometros(0);
+		this.modelo = modelo;
+		this.capacidad = capacidad;
+		this.consumo = consumo;
+		setCombustibleActual(getCapacidad());
+		setKilometrosRecorridos(0);
 		setCombustibleConsumido(0);
 	}
 	
-	public void llenarDeposito() {
-		setCombustible(getCapacidad());
-		System.out.println("Depósito lleno a " + getCombustible());
-	}
-	
-	public void llenarDeposito2() {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Cuantos L deseas llenar?");
-		combustible = scanner.nextInt();
-		
-		if (combustible > getCapacidad()) {
-			System.out.println("Deposito lleno y sobra " + getCombustible()-getCapacidad());
+	public void llenarDepositoAlMaximo() {
+		if (getCapacidad() == getCombustibleActual()) {
+			System.out.println("Ya tienes el depósito lleno");
+		} else {
+			double litrosAllenar = capacidad - combustibleActual;
+			System.out.println("Tenias " +getCombustibleActual()+ " y has llenado al maximo, (" +getCapacidad()+ "L) has echado " +litrosAllenar+ " l");
+			setCombustibleActual(litrosAllenar);
 		}
 	}
 	
+	public void llenarDeposito(double litros) {
+		double total = litros + getCombustibleActual();
+		if (total > getCapacidad()) {
+			double sobra = total - getCapacidad();
+			System.out.println("Has llenado el depósito al máximo y te sobran " +sobra+ " litros");
+			setCombustibleActual(getCapacidad());
+		} else if (total <= getCapacidad()) {
+			System.out.println("Has echado " +litros+ "L y ahora el deposito tiene " +total+ " L / " +getCapacidad()+ " L de capacidad");
+			setCombustibleActual(total);
+		}
+	}
+	
+	public void desplzar(int kmARecorrer) {
+		double puedeRecorrer = (combustibleActual/consumo) * 100;
+		double combustibleNecesario = (consumo*kmARecorrer) / 100;
+		if (puedeRecorrer < kmARecorrer) {
+			System.out.println("No tienes suficiente combustible para hacer " +kmARecorrer+ " km");
+		} else if (puedeRecorrer > kmARecorrer) {
+			double meQueda = combustibleActual-combustibleNecesario;
+			System.out.println("Has necesitado " +combustibleNecesario+ " L para hacer los " +kmARecorrer+ " km y ahora tienes " +meQueda+ " L");
+			setCombustibleActual(meQueda);
+		}
+	}
+	
+	public String toString() {
+		return "modelo: " +getModelo()+ ", capacidad: " +getCapacidad()+ ", combustible actual: " +getCombustibleActual()+ ", consumo: " +getConsumo();
+	}
 	
 	public String getModelo() {
 		return modelo;
 	}
+
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
+
 	public int getCapacidad() {
 		return capacidad;
 	}
+
 	public void setCapacidad(int capacidad) {
 		this.capacidad = capacidad;
 	}
-	public int getCombustible() {
-		return combustible;
+
+	public double getCombustibleActual() {
+		return combustibleActual;
 	}
-	public void setCombustible(int combustible) {
-		this.combustible = combustible;
+
+	public void setCombustibleActual(double combustibleActual) {
+		this.combustibleActual = combustibleActual;
 	}
+
 	public double getConsumo() {
 		return consumo;
 	}
+
 	public void setConsumo(double consumo) {
 		this.consumo = consumo;
 	}
-	public int getKilometros() {
-		return kilometros;
+
+	public int getKilometrosRecorridos() {
+		return kilometrosRecorridos;
 	}
-	public void setKilometros(int kilometros) {
-		this.kilometros = kilometros;
+
+	public void setKilometrosRecorridos(int kilometrosRecorridos) {
+		this.kilometrosRecorridos = kilometrosRecorridos;
 	}
+
 	public int getCombustibleConsumido() {
 		return combustibleConsumido;
 	}
+
 	public void setCombustibleConsumido(int combustibleConsumido) {
 		this.combustibleConsumido = combustibleConsumido;
 	}
-	
-	
 }
