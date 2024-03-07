@@ -1,6 +1,6 @@
 package ejercicio8;
 
-public class Automovil {
+public class Automovil extends Main {
 	
 	String modelo;
 	int capacidad;
@@ -44,25 +44,26 @@ public class Automovil {
 			System.out.println("Has llenado el depósito al máximo y te sobran " +sobra+ " litros");
 			setCombustibleActual(getCapacidad());
 		} else if (total <= getCapacidad()) {
-			System.out.println("Has echado " +litros+ "L y ahora el deposito tiene " +total+ " L / " +getCapacidad()+ " L de capacidad");
+			System.out.println("Has echado " +litros+ " L a tu " +getModelo()+ " y ahora el deposito tiene " +total+ " L / " +getCapacidad()+ " L de capacidad");
 			setCombustibleActual(total);
 		}
 	}
 	
-	public void desplzar(int kmARecorrer) {
+	public void desplzar(double kmARecorrer) {
 		double puedeRecorrer = (combustibleActual/consumo) * 100;
 		double combustibleNecesario = (consumo*kmARecorrer) / 100;
 		if (puedeRecorrer < kmARecorrer) {
-			System.out.println("No tienes suficiente combustible para hacer " +kmARecorrer+ " km");
+			System.out.println("Solo tienes " +combustibleActual+ "L para hacer " +kmARecorrer+ " km y necesitas " +combustibleNecesario+ " L");
 		} else if (puedeRecorrer > kmARecorrer) {
 			double meQueda = combustibleActual-combustibleNecesario;
-			System.out.println("Has necesitado " +combustibleNecesario+ " L para hacer los " +kmARecorrer+ " km y ahora tienes " +meQueda+ " L");
+			System.out.println("Has necesitado " +combustibleNecesario+ " L para hacer los " +kmARecorrer+ " km con tu " +getModelo()+ " y ahora tienes " +meQueda+ " L");
 			setCombustibleActual(meQueda);
 		}
 	}
 	
+	@Override
 	public String toString() {
-		return "modelo: " +getModelo()+ ", capacidad: " +getCapacidad()+ ", combustible actual: " +getCombustibleActual()+ ", consumo: " +getConsumo();
+		return "modelo: " +getModelo()+ ", capacidad: " +getCapacidad()+ "L , combustible actual: " +getCombustibleActual()+ "L , consumo: " +getConsumo()+ "L";
 	}
 	
 	public String getModelo() {

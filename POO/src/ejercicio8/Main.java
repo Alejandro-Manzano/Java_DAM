@@ -37,8 +37,23 @@ public class Main {
 		}
 		
 		for (Automovil automovil : automoviles) {
+			
 			System.out.println(automovil.toString());
+			
+				System.out.println("Cuanto litros quieres llenar?");
+				Double liDouble = scanner.nextDouble();
+				automovil.llenarDeposito(liDouble);
+				System.out.println("Cuantos km te quieres desplazar?");
+				Double reString = scanner.nextDouble();		
+				automovil.desplzar(reString);
+				
+				System.out.println("--------------------------------------");
+		
+			
 		}
+		System.out.println("Fin");	
+		
+		scanner.close();
 	}
 
 }
