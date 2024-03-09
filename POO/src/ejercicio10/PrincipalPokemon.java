@@ -1,9 +1,9 @@
-package ejercicio9;
+package ejercicio10;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PrincipalPokemon {
+public class principalPokemon {
 
 	static ArrayList<Entrenador> entrenadores = new ArrayList<Entrenador>();
 
@@ -28,7 +28,7 @@ public class PrincipalPokemon {
 			if (!hayTorneo) {//meto entrenador o pokemons
 				String[] lineaSplit = linea.split(" ");
 
-				if (entrenadores.size() == 0) {// si el arrayList está vacio meto sin comprobar
+				if (entrenadores.size() == 0) {// si el arrayList estï¿½ vacio meto sin comprobar
 					meterEntrenador(lineaSplit);
 				} else {
 					
@@ -44,9 +44,9 @@ public class PrincipalPokemon {
 							break;
 							// existe = true;
 						} else {
-							// no puedo añadir el entrenador aquí porque si no me da un error en tiempo de
-							// ejecución por modificar el array al recorrerlo
-							//debo crear un booleano para señalizar que debo añadir a Brock
+							// no puedo aï¿½adir el entrenador aquï¿½ porque si no me da un error en tiempo de
+							// ejecuciï¿½n por modificar el array al recorrerlo
+							//debo crear un booleano para seï¿½alizar que debo aï¿½adir a Brock
 							existe = false;
 						}
 					}
@@ -57,7 +57,7 @@ public class PrincipalPokemon {
 		
 			}
 
-			else {// si hayTorneo es True y "linea" tendrá solo una palabra
+			else {// si hayTorneo es True y "linea" tendrï¿½ solo una palabra
 				
 				
 			}
