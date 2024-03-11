@@ -53,6 +53,8 @@ public class principalPokemon {
 					if (existe == false)
 						meterEntrenador(lineaSplit);
 				}
+				
+				
 
 		
 			}
