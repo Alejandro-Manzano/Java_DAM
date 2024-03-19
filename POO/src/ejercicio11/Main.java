@@ -2,16 +2,14 @@ package ejercicio11;
 
 import java.util.ArrayList;
 
-import ejercicio3.Autor;
-
 public class Main {
 
 	public static void main(String[] args) {
 		
 		ArrayList<Autor> autores = new ArrayList<Autor>();
-		Autor autor1 = new Autor ("Pepe", "asdsadasdsad@com", "masculin");
-		Autor autor2 = new Autor ("Pepe2", "asdsadasdsad@com", "masculin");
-		Autor autor3 = new Autor ("Pepe3", "asdsadasdsad@com", "masculin");
+		Autor autor1 = new Autor ("Pepe", "pepe@com", "masculino");
+		Autor autor2 = new Autor ("Gustavo", "gustavo@com", "masculino");
+		Autor autor3 = new Autor ("Felipe", "felipe@com", "masculin");
 		
 		autores.add(autor1);
 		autores.add(autor2);
@@ -19,7 +17,7 @@ public class Main {
 		
 		Libro libro1 = new Libro("Harry Potter", autores, 30, 21);
 
-		libro1.toString();
+		
 		
 	}
 

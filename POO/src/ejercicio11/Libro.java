@@ -2,31 +2,27 @@ package ejercicio11;
 
 import java.util.ArrayList;
 
-import ejercicio3.Autor;
-
 public class Libro {
+	
 	String titulo;
 	ArrayList<Autor> autores = new ArrayList<Autor>();
 	float precio;
-	int stock = 0;
+	int stock;
+	String gender;
 	
-	public Libro(String titulo, ArrayList<Autor> autores, float precio) {
-		this.titulo = titulo; 
-		this.autores = autores; 
-		this.precio = precio;
-		setStock(10);
-	}
 	
-	public Libro(String titulo, ArrayList<Autor> autores, float precio, int stock) {
+	
+	public Libro(String titulo, ArrayList<Autor> autores, float precio, int stock, String gender) {
 		this.titulo = titulo; 
 		this.autores = autores; 
 		this.precio = precio;
 		this.stock = stock;
+		this.gender = gender;
 	}
 	
 	
 	public String toString() {
-		return getTitulo() + "(" + autores.toString() + ")" +getPrecio()+ " - " +getStock();
+		return "título: " + getTitulo() + " -- autores: (" + autores.toString() + ")" +getPrecio()+ " -- " +getStock();
 	}
 
 	public String getTitulo() {

@@ -7,9 +7,14 @@ public class Autor {
 	String genero;
 
 	public Autor(String nombre, String email, String genero){
-		setNombre(nombre);
-		setEmail(email);
-		setGenero(genero);	
+		
+		this.nombre = nombre;
+		this.email = email;
+		this.genero = genero;
+	}
+	
+	public String toString() {
+		return "nombre: " +getNombre()+ " email: " +getEmail()+ " género: " +getGenero();
 	}
 
 	public String getNombre() {
@@ -34,6 +39,10 @@ public class Autor {
 
 	public void setGenero(String genero) {
 		this.genero = genero;
+	}
+	
+	public void changeEmail(String email) {
+		setEmail(email);
 	}
 	
 }
