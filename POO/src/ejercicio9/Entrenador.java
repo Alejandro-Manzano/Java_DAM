@@ -5,40 +5,40 @@ import java.util.ArrayList;
 public class Entrenador {
 	
 	String nombre;
-	int numeroDeInsignias;
-	ArrayList<Pokemon>pokemons = new ArrayList<Pokemon>();
-
+	int insignias = 0;
+	ArrayList<Pokemon> pokemons = new ArrayList<Pokemon>();
+	
+	
 	public Entrenador(String nombre) {
 		this.nombre = nombre;
-		setNumeroDeInsignias(0);
 	}
+	
 	
 	public String getNombre() {
 		return nombre;
 	}
+	@Override
+	public String toString() {
+		return "Entrenador [nombre=" + nombre + ", insignias=" + insignias + ", pokemons=" + pokemons + "]";
+	}
+
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-
-	public int getNumeroDeInsignias() {
-		return numeroDeInsignias;
+	public int getInsignias() {
+		return insignias;
 	}
-
-	public void setNumeroDeInsignias(int numeroDeInsignias) {
-		this.numeroDeInsignias = numeroDeInsignias;
+	public void setInsignias(int insignias) {
+		this.insignias = insignias;
 	}
-
+	public void addInsignias() {
+		this.insignias += 1;
+	}
 	public ArrayList<Pokemon> getPokemons() {
 		return pokemons;
 	}
-
 	public void setPokemons(ArrayList<Pokemon> pokemons) {
 		this.pokemons = pokemons;
 	}
-	
-	public String toString() {
-		return "Nombre entrenador: " +getNombre()+ "Pokemons: " +getPokemons().toString();
-	}
-	
 }
