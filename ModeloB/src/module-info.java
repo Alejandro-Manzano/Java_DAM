@@ -10,13 +10,19 @@ module ModeloB {
 
 
 
-//Estás de prácticas en una subcontrata del gobierno qué quiere tener datos de todos los estudiantes de todas las asignaturas de todas las las universidades de España, te toca pringar y hacerlo todo, pero un amigo muy majo te dice cómo podrías empezar a gestionarlo, te dice:
+//Estás de prácticas en una subcontrata del gobierno qué quiere tener datos de 
+//todos los estudiantes de todas las asignaturas de todas las las universidades 
+//de España, te toca pringar y hacerlo todo, pero un amigo muy majo te dice cómo 
+//podrías empezar a gestionarlo, te dice:
 
-//Lo primero es lo primero, se necesita seguridad, pon todos los atributos para que sean privados, usa getters, setters y toStrings para acceder a los atributos o visualizar clases
+//Lo primero es lo primero, se necesita seguridad, pon todos los atributos para 
+//que sean privados, usa getters, setters y toStrings para acceder a los atributos o visualizar clases
 
-//Después, yo crearía 3 clases: Estudiante, Asignatura y Universidad. Ah! No te olvides de la Principal, la que tiene el main pa que puedas ejecutar el programa.
+//Después, yo crearía 3 clases: Estudiante, Asignatura y Universidad. Ah! No te olvides de la Principal, 
+//la que tiene el main pa que puedas ejecutar el programa.
 
-//...mmm yo en asignatura pondría el nombre, el nnúmeroDeCreditos, una nota (double), el nombre de la universidad que oferta la asignatura, y un boolean estaSiendoCursada. Obviamente añádele un constructor.
+//...mmm yo en asignatura pondría el nombre, el nnúmeroDeCreditos, una nota (double), el nombre de la 
+//universidad que oferta la asignatura, y un boolean estaSiendoCursada. Obviamente añádele un constructor.
 
 //...pues en Estudiante lo típico, nombre, DNI (string), un ArrayList con todas las asignaturas de su carrera, y dos métodos matricularse y desmatricularse, que recibirán el nombre de una asignatura por la llamada al método, y si existe, cambiará el valor del boolean a verdadero o falso, según corresponda. También crea un constructor con sus atributos.
 
